@@ -1,5 +1,27 @@
-/.idea
+# Entorno virtual
 .venv/
-.idea/
+venv/
+env/
+*.pyc
+**__pycache__/
+
+# Configuración de entorno y dependencias
 .env
+*.log
+instance/
+
+# Archivos de caché y compilados de Python
+*.pyc
+*.pyo
+*.pyd
+
+# Bases de datos y migraciones (si usas SQLite o Flask-Migrate)
+*.sqlite3
+migrations/
+
+# Configuración de IDEs y editores de código
+.vscode/
+**.idea/
+*.swp
+*.swo
 
