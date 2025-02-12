@@ -18,10 +18,11 @@ instance/
 # Bases de datos y migraciones (si usas SQLite o Flask-Migrate)
 *.sqlite3
 migrations/
+DB/
 
 # Configuración de IDEs y editores de código
+/.idea
 .vscode/
 **.idea/
 *.swp
 *.swo
-

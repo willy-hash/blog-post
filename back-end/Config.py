@@ -4,13 +4,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-#'C:\\Users\\rige_\\OneDrive\\Documentos\\BashFile\\pythonProject'
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     #FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN') email for amdin
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-
 
     @staticmethod
     def init_app(app):
@@ -18,12 +16,13 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    #config database connection
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
+    'sqlite:///' + os.path.join(basedir, 'DB/development-sqlite.db')
 
 class TestingConfig(Config):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
-    'sqlite:///' + os.path.join(basedir, 'testing-sqlite.db')
+    'sqlite:///' + os.path.join(basedir, 'DB/testing-sqlite.db')
 
 class ProductionConfig(Config):
     pass

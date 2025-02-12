@@ -6,13 +6,18 @@ from .. import db
 @main.route('/', methods=['GET'])
 def index():
 
-    user1 = User.query.first()
-
-    blogs = [{'id' : user.id , 'Blog title' : user.title} for user in user1.blogs]
+    blog1 = Blog.query.first()
 
     return jsonify({
-        'id' : user1.id,
-        'nombre' : user1.name,
-        'email' : user1.email,
-        'blogs' : blogs
+        "id": blog1.id,
+        "title": blog1.title,
+        "content": blog1.content,
+        "image": blog1.image,
+        "category": blog1.category,
+        "punctuation": blog1.punctuation,
+        "views": blog1.views,
+        "summary": blog1.summary,
+        "created_at": blog1.created_at.strftime("%Y-%m-%d %H:%M:%S"),
+        "updated_at": blog1.updated_at.strftime("%Y-%m-%d %H:%M:%S"),
+        "author_id": blog1.author_id
     })
