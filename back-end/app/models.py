@@ -11,13 +11,20 @@ class Blog(db.Model):
     image = db.Column(db.String(255), nullable=False)
     category = db.Column(db.String(64), nullable=False)
     punctuation = db.Column(db.Integer)
-    views = db.Column(db.Integer)
+    views = db.Column(db.Integer, nullable=False)
     summary = db.Column(db.String(255), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now)
     updated_at = db.Column(db.DateTime, default=datetime.now)
     author_id = db.Column(db.Integer, db.ForeignKey('authors.id'), nullable=False)
 
     author = db.relationship("User", back_populates="blogs")
+
+class Comment(db.Model):
+    __tablename__ = "comments"
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    comment = db.Column(db.String(255), nullable=False)
+
+    blog_id = db.Column(db.Integer, db.ForeignKey('blogs.id'), nullable=False)
 
 
 class User(db.Model):
