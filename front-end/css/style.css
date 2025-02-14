@@ -1,0 +1,17 @@
+/*Carusel*/
+.carousel {
+    margin-bottom: 4rem;
+  }
+
+/*Posicion de img*/
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+.carousel-item {
+    height: 32rem;
+  }
+  
+
+
