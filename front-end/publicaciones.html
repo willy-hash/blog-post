@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notiblog</title>
+    <link rel="stylesheet" href="assets/css/estilos_publicaciones.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                <div class="col-md-3 mb-2 mb-md-0">
+                    <a href="#" class="d-inline-flex link-body-emphasis text-decoration-none">
+                        <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap Logo" width="40" height="32">
+                    </a>
+                </div>
+
+                <ul class="nav nav-underline col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Page</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="col-md-3 text-end">
+                    <ul class="nav nav-underline justify-content-end ">
+                        <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                        <li><a class="nav-link" href="registro.html">Sign Up</a></li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+    </header>
+
+    <!-- MODAL LOGIN -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Correo Electrónico</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                            <label for="floatingPassword">Contraseña</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                            <label class="form-check-label" for="rememberPasswordCheck">
+                                Recordar contraseña
+                            </label>
+                        </div>
+
+                        <div class="d-grid mb-3">
+                            <button class="btn btn-lg btn-dark btn-login text-uppercase fw-bold mb-2" type="button">Iniciar sesión</button>
+                            <div class="text-center">
+                                <a class="small" href="#">¿Olvidó su <Caption></Caption>ontraseña?</a>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="registro.html" class="btn btn-lg btn-dark btn-login text-uppercase fw-bold mb-2">Registrarme</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <div class="container mt-4">
+
+    <div class="container mt-4">
+      <article id="noticia" class="mb-4">
+          <h2 id="titulo-noticia">Cargando...</h2>
+          <p id="fecha-noticia" class="text-muted"></p>
+          <img id="imagen-noticia" src="" alt="Imagen de la noticia" class="img-fluid">
+          <p id="contenido-noticia">Cargando contenido...</p>
+      </article>
+
+      <!-- Noticias populares -->
+      <div class="row">
+          <div class="col-md-4">
+              <h2>Noticias Populares</h2>
+              <div id="noticias-populares"></div>
+          </div>
+      </div>
+
+      <!-- Carrusel de noticias relacionadas -->
+      <div class="container mt-5">
+          <h2 class="fw-bold">Relacionadas</h2>
+          <div id="carouselNoticias" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" id="carousel-content">
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoticias" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselNoticias" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+          </div>
+      </div>
+    </div>
+
+          <!-- Sección de calificación y comentarios -->
+          <div class="container mt-5">
+            <div class="comments-container ">
+              <div class="col-md-12 d-flex flex-column align-items-center text-center">
+                  <h4>Calificar post</h4>
+                  <div class="rating-stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+              </div>
+              <div class="col-md-12 comments-container">
+                  <h4>Comentarios</h4>
+                  <textarea class="form-control" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+     
+             
+  </div>
+  
+  <footer class=" text-center mt-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Buscar</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Nosotros</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Redes</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Otros</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2024 Notiblog, Inc</p>
+  </footer>  
+
+  <script src="assets/js/script_publicaciones.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

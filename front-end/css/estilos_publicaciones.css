@@ -1,0 +1,106 @@
+
+/*Lo uso para ver la pocision de cada seccion que creo*/
+.guiasecction {
+    background-color: #52a1f0;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.h1-p{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.p-publicaciones{
+    margin-top: 20px;
+}
+
+/*Estilos de noticias populares*/
+
+.noticias-populares {
+    max-width: 400px;
+}
+
+  /* Ajusta la separación y el diseño de las noticias populares */
+  .noticias-populares .noticia-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.noticias-populares  .card-title {
+    margin-bottom: 5px; /* Evita que el texto toque otros elementos */
+}
+
+.noticia-item {
+    margin-bottom: 5px; /* Evita que el texto toque otros elementos */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+}
+
+.noticias-populares .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.noticias-populares .col-md-6 {
+    display: flex;
+}
+
+.noticia-item img {
+    width: 100%;
+    height: auto; /* Asegura que la imagen se ajuste sin distorsión */
+}
+
+.noticia-item h5 {
+    flex-grow: 1; /* Hace que el título ocupe el espacio disponible */
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+/*Estilos de carousel */
+
+ /* Ajuste del tamaño del carrusel */
+ #carouselNoticias .carousel-item img {
+    max-height: 250px; /* altura */
+    object-fit: cover; 
+}
+
+/* Ajuste de la superposición de texto */
+.card-img-overlay {
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* Reducción del tamaño del título de cada imagen en el carousel */
+.card-img-overlay .badge {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.card-img-overlay h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.card-img-overlay p {
+    font-size: 12px;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/*Estilos footer / caja de comentarios y puntuacion */
+
+.rating-stars {
+    font-size: 24px;
+}
+
+.comments-container {
+    margin-top: 20px; /* Espaciado para separar la sección de calificación y comentarios */
+   
+}
+
+
